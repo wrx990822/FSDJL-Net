@@ -1,0 +1,11 @@
+Stage-Wise Frequency–Spatial Joint Learning for Robust Vehicle Detection in Adverse Weather
+
+This repository provides the official implementation of FSDJL-Net, a stage-wise frequency–spatial joint learning framework for robust vehicle detection under adverse weather conditions. The method is designed for challenging traffic scenes affected by fog, rain, snow, sandstorms, low contrast, blurred object boundaries, sparse contours, and weather-induced visual artefacts.
+
+Unlike methods that directly fuse frequency-domain and spatial-domain features at shallow layers, FSDJL-Net treats adverse-weather detection as a stage-wise cross-domain learning problem. It first builds a stable foundational representation from degraded inputs, then enhances reliable frequency-domain structural cues, and finally performs deep frequency–spatial joint learning on semantically richer features.
+
+The framework consists of three key components. JDFD performs joint-domain feature downsampling by combining depthwise convolution, spatial slicing, and Haar wavelet decomposition to preserve complementary information while reducing redundant noise. FDFE introduces differential frequency-domain feature extraction with re-parameterisable differential convolutions to strengthen edges, contours, directional gradients, and high-frequency structural details with limited inference overhead. JDL conducts deep spatial modelling and frequency–spatial interaction to integrate contextual object structures with frequency-domain cues at a more reliable semantic stage.
+
+Experiments are conducted on the DAWN and BDD100K datasets using COCO-style detection metrics. The repository includes training and evaluation code, model configurations for different computational variants, and scripts for reproducing comparison, ablation, weather-specific, and statistical reliability experiments. The results show that FSDJL-Net achieves a favourable balance among detection accuracy, small-object recognition, and inference efficiency in diverse adverse-weather traffic scenes.
+
+This project aims to support further research on robust object detection, adverse-weather perception, frequency-domain learning, spatial-domain modelling, and intelligent transportation systems.
